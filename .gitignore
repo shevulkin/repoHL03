@@ -1,0 +1,10 @@
+# Власні налаштування Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+
+# Тимчасові файли
+*.tmp
+*.log
