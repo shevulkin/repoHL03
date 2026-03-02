@@ -1,5 +1,4 @@
 ﻿//ДЗ 2. Система управління космічними вантажами
-
 public struct Coordinates
 {
     public double X;
