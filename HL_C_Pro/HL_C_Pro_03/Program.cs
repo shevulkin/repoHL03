@@ -1,27 +1,16 @@
 ﻿using System.Globalization;
 
 /*
-
 1. Абстракція та Наслідування
-
 Створіть абстрактний клас StationModule.
-
 Поля (Інкапсуляція): Приватне поле _energyConsumption.
-
 Властивості: string Name (init-only), IsRunning (bool).
-
 Конструктор: Встановлює назву та базове споживання енергії.
-
 Абстрактний метод: void PerformDiagnostics().
-
 Похідні класи:
-
 LifeSupportModule — при діагностиці виводить стан кисню.
-
 ScienceModule — додає поле List<string> ResearchProjects.
-
 */
-
 abstract class StationModule
 {
     private readonly double _energyConsumption;
@@ -90,19 +79,12 @@ class ScienceModule : StationModule
 /*
 
 3. Інтерфейси
-
 Створіть інтерфейс IEnergySource (Джерело енергії).
-
 Члени: Метод double GetOutput(), властивість string EnergyType.
-
 Реалізація:
-
 Клас SolarPanel (повертає енергію залежно від "інтенсивності сонця").
-
 Клас NuclearReactor (повертає стабільну велику потужність).
-
 */
-
 interface IEnergySource
 {
     string EnergyType { get; }
@@ -140,17 +122,11 @@ class NuclearReactor : IEnergySource
 
 
 /*
-
 4. Дженеріки (Generics) та Обмеження
-
 Створіть дженерік-клас StorageUnit<T>, де T — це вантаж.
-
 Обмеження: T має бути посилальним типом і мати конструктор за замовчуванням (where T : class, new()).
-
 Поля: List<T> _items.
-
 Методи: AddItem(T item), T GetItem(int index).
-
 */
 
 class StorageUnit<T> where T : class, new()
