@@ -1,4 +1,6 @@
-﻿/*
+﻿using System.Diagnostics;
+using System.Text;
+/*
 ДЗ 8. Асинхронний агрегатор крипто-бірж
 //
 Ви пишете ядро для термінала, який має зібрати ціну біткоїна (BTC) з кількох різних бірж одночасно, щоб знайти найкращу пропозицію. Кожна біржа має свій API, який відповідає з різною швидкістю.
@@ -26,14 +28,14 @@
 Якщо жодна біржа не відповіла протягом 2.5 секунд, програма має видати помилку: "Мережевий таймаут: біржі не відповідають".
 */
 
-using System.Diagnostics;
-
 class Program
 {
     private static readonly Random random = new Random();
     // --- Точка входу: послідовно запускаємо обидва режими ---
     static async Task Main(string[] args)
     {
+        Console.Clear();
+        Console.OutputEncoding = Encoding.UTF8;
         // Режим 2+3: повний збір цін з можливістю скасування
         await RunWhenAllMode();
         Console.WriteLine();
