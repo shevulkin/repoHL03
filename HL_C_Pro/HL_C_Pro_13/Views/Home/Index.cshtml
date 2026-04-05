@@ -2,44 +2,41 @@
     ViewData["Title"] = "Головна";
 }
 
-<div class="text-center">
-    <h1 class="display-4">ДЗ 12. Каталог фільмів</h1>
-    <p class="lead">Ласкаво просимо до нашого менеджера фільмів! 🎬</p>
+<div class="hero-section mb-5 animate-in">
+    <h1>🎬 Каталог фільмів</h1>
+    <p class="lead mb-4">Ваш персональний менеджер кіноколекції</p>
+    <a asp-controller="Movies" asp-action="Index" class="btn btn-light btn-lg px-4 py-2 fw-bold" style="border-radius:50px;">
+        Перейти до перегляду →
+    </a>
 </div>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">📽️ Про додаток</h5>
-                    <p class="card-text">
-                        Цей додаток дозволяє вам керувати своєю колекцією улюблених фільмів. 
-                        Ви можете додавати нові фільми, редагувати існуючі, видаляти їх та фільтрувати 
-                        за назвою, жанром або роком випуску.
-                    </p>
-                </div>
+<div class="row g-4 mb-5">
+    <div class="col-md-4 animate-in">
+        <div class="card card-hover h-100 shadow-sm">
+            <div class="card-body feature-card">
+                <div class="feature-icon">📋</div>
+                <h5 class="fw-bold">Каталогізація</h5>
+                <p class="text-muted mb-0">Додавайте, редагуйте та організовуйте свою колекцію фільмів в одному місці</p>
             </div>
-
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">🎥 Що ви можете робити?</h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">✅ Переглядати список всіх фільмів</li>
-                        <li class="list-group-item">✅ Додавати нові фільми до каталогу</li>
-                        <li class="list-group-item">✅ Редагувати інформацію про фільми</li>
-                        <li class="list-group-item">✅ Видаляти фільми зі списку</li>
-                        <li class="list-group-item">✅ Шукати фільми за назвою</li>
-                        <li class="list-group-item">✅ Фільтрувати за жанром та роком</li>
-                    </ul>
-                </div>
+        </div>
+    </div>
+    <div class="col-md-4 animate-in">
+        <div class="card card-hover h-100 shadow-sm">
+            <div class="card-body feature-card">
+                <div class="feature-icon">🔍</div>
+                <h5 class="fw-bold">Пошук та фільтри</h5>
+                <p class="text-muted mb-0">Шукайте за назвою, фільтруйте за жанром та роком, сортуйте як зручно</p>
             </div>
-
-            <div class="text-center mb-4">
-                <a href="@Url.Action("Index", "Movies")" class="btn btn-primary btn-lg">
-                    🎬 Перейти до каталогу фільмів
-                </a>
+        </div>
+    </div>
+    <div class="col-md-4 animate-in">
+        <div class="card card-hover h-100 shadow-sm">
+            <div class="card-body feature-card">
+                <div class="feature-icon">▶️</div>
+                <h5 class="fw-bold">Перегляд</h5>
+                <p class="text-muted mb-0">Завантажуйте відео або додавайте посилання на YouTube для перегляду прямо в браузері</p>
             </div>
         </div>
     </div>
 </div>
+
