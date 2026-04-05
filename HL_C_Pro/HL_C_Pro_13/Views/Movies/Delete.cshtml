@@ -7,37 +7,39 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-6 mx-auto">
-            <div class="card border-danger shadow-sm">
-                <div class="card-header bg-danger text-white">
-                    <h5 class="mb-0">🗑️ Підтвердження видалення</h5>
-                </div>
-                <div class="card-body">
-                    <p class="mb-3">Ви впевнені, що хочете видалити цей фільм?</p>
+            <div class="card shadow-sm animate-in" style="border: 2px solid #fecaca;">
+                <div class="card-body p-0">
+                    <div style="background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: var(--radius) var(--radius) 0 0;" class="p-3">
+                        <h5 class="mb-0 text-white fw-bold">🗑️ Підтвердження видалення</h5>
+                    </div>
+                    <div class="p-4">
+                        <p class="mb-3">Ви впевнені, що хочете видалити цей фільм?</p>
 
-                    <dl class="row">
-                        <dt class="col-sm-4">Назва</dt>
-                        <dd class="col-sm-8 fw-bold">@Model.Title</dd>
+                        <dl class="row mb-0">
+                            <dt class="col-sm-4">Назва</dt>
+                            <dd class="col-sm-8 fw-bold">@Model.Title</dd>
 
-                        <dt class="col-sm-4">Жанр</dt>
-                        <dd class="col-sm-8"><span class="badge bg-info text-dark">@Model.Genre</span></dd>
+                            <dt class="col-sm-4">Жанр</dt>
+                            <dd class="col-sm-8"><span class="badge-genre">@Model.Genre</span></dd>
 
-                        <dt class="col-sm-4">Рік</dt>
-                        <dd class="col-sm-8">@Model.Year</dd>
-                    </dl>
+                            <dt class="col-sm-4">Рік</dt>
+                            <dd class="col-sm-8"><span class="badge-year">@Model.Year</span></dd>
+                        </dl>
 
-                    @if (!string.IsNullOrEmpty(Model.MovieFilePath))
-                    {
-                        <div class="alert alert-warning py-2">
-                            ⚠️ Буде також видалено прикріплений відеофайл.
-                        </div>
-                    }
-                </div>
-                <div class="card-footer d-flex gap-2">
-                    <form asp-action="Delete" method="post">
-                        <input type="hidden" name="id" value="@Model.Id" />
-                        <button type="submit" class="btn btn-danger">🗑️ Так, видалити</button>
-                    </form>
-                    <a asp-action="Index" class="btn btn-outline-secondary">← Скасувати</a>
+                        @if (!string.IsNullOrEmpty(Model.MovieFilePath))
+                        {
+                            <div class="alert alert-warning py-2 mt-3 mb-0" style="border-radius:var(--radius-sm)">
+                                ⚠️ Буде також видалено прикріплений відеофайл.
+                            </div>
+                        }
+                    </div>
+                    <div class="p-3 d-flex gap-2" style="border-top: 1px solid var(--border);">
+                        <form asp-action="Delete" method="post">
+                            <input type="hidden" name="id" value="@Model.Id" />
+                            <button type="submit" class="btn btn-danger">🗑️ Так, видалити</button>
+                        </form>
+                        <a asp-action="Index" class="btn btn-outline-secondary">← Скасувати</a>
+                    </div>
                 </div>
             </div>
         </div>

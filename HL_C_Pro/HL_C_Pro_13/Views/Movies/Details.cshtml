@@ -31,14 +31,14 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-8 mx-auto">
-            <div class="card shadow-sm mb-4">
+            <div class="card shadow-sm mb-4 animate-in">
                 <div class="card-body">
-                    <h1 class="card-title mb-4">🎬 @Model.Title</h1>
+                    <h1 class="fw-bold text-gradient mb-4">🎬 @Model.Title</h1>
 
                     <div class="row mb-4">
                         <div class="col-md-6">
-                            <p><strong>Жанр:</strong> <span class="badge bg-info text-dark">@Model.Genre</span></p>
-                            <p><strong>Рік випуску:</strong> @Model.Year</p>
+                            <p><strong>Жанр:</strong> <span class="badge-genre">@Model.Genre</span></p>
+                            <p><strong>Рік випуску:</strong> <span class="badge-year">@Model.Year</span></p>
                         </div>
                     </div>
 
