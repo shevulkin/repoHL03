@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Головна";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ДЗ 12. Каталог фільмів</h1>
+    <p class="lead">Ласкаво просимо до нашого менеджера фільмів! 🎬</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">📽️ Про додаток</h5>
+                    <p class="card-text">
+                        Цей додаток дозволяє вам керувати своєю колекцією улюблених фільмів. 
+                        Ви можете додавати нові фільми, редагувати існуючі, видаляти їх та фільтрувати 
+                        за назвою, жанром або роком випуску.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">🎥 Що ви можете робити?</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">✅ Переглядати список всіх фільмів</li>
+                        <li class="list-group-item">✅ Додавати нові фільми до каталогу</li>
+                        <li class="list-group-item">✅ Редагувати інформацію про фільми</li>
+                        <li class="list-group-item">✅ Видаляти фільми зі списку</li>
+                        <li class="list-group-item">✅ Шукати фільми за назвою</li>
+                        <li class="list-group-item">✅ Фільтрувати за жанром та роком</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mb-4">
+                <a href="@Url.Action("Index", "Movies")" class="btn btn-primary btn-lg">
+                    🎬 Перейти до каталогу фільмів
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
