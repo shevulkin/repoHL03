@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace HL_C_Pro_14.Models;
 
@@ -23,7 +24,7 @@ public partial class PostgresContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var config = new Microsoft.Extensions.Configuration.ConfigurationBuilder()
+            var config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build();
             optionsBuilder.UseNpgsql(config.GetConnectionString("DefaultConnection"));
