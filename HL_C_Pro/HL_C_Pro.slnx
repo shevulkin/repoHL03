@@ -13,6 +13,11 @@
   <Project Path="HL_C_Pro_12/HL_C_Pro_12.csproj" Id="2d8d1369-1a4b-4c80-865f-e9f802a0419a" />
   <Project Path="HL_C_Pro_13/HL_C_Pro_13.csproj" />
   <Project Path="HL_C_Pro_14/HL_C_Pro_14.csproj" Id="c85c33f4-41c9-4aed-a051-33cce69408e3" />
-  <Project Path="HL_C_Pro_15.Tests/HL_C_Pro_15.Tests.csproj" Id="7743aea4-dd86-4a8b-994f-8dd5f844ec96" />
-  <Project Path="HL_C_Pro_15/HL_C_Pro_15.csproj" Id="a669ef4e-4796-4117-8756-c56aa7396b94" />
+  <Project Path="HL_C_Pro_15.Tests/HL_C_Pro_15.Tests.csproj" Id="7743aea4-dd86-4a8b-994f-8dd5f844ec96">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="HL_C_Pro_15/HL_C_Pro_15.csproj" Id="a669ef4e-4796-4117-8756-c56aa7396b94">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="HL_C_Pro_16/HL_C_Pro_16.csproj" Id="c100af86-8173-4f3b-831a-73be9388ec2c" />
 </Solution>

@@ -1,0 +1,73 @@
+<Window x:Class="MyApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вхід" Height="260" Width="360"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0"
+                   Text="Авторизація"
+                   FontSize="20" FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <!-- Логін -->
+        <TextBox Grid.Row="1"
+                 Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}"
+                 Height="32"
+                 Padding="6,4"
+                 Margin="0,0,0,10">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Resources>
+                        <VisualBrush x:Key="HintBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <TextBlock Text="Логін" Foreground="Gray" Margin="6,0,0,0"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HintBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <!-- Пароль -->
+        <PasswordBox Grid.Row="2"
+                     x:Name="PasswordBox"
+                     Height="32"
+                     Padding="6,4"
+                     Margin="0,0,0,20"
+                     PasswordChanged="PasswordBox_PasswordChanged"/>
+
+        <!-- Кнопка Увійти — активна тільки коли CanLogin = true -->
+        <Button Grid.Row="3"
+                Content="Увійти"
+                Height="36"
+                FontSize="14"
+                Command="{Binding LoginCommand}"
+                IsEnabled="{Binding CanLogin}"/>
+
+        <!-- Повідомлення про статус -->
+        <TextBlock Grid.Row="4"
+                   Text="{Binding StatusMessage}"
+                   Foreground="Green"
+                   FontSize="13"
+                   HorizontalAlignment="Center"
+                   Margin="0,12,0,0"
+                   TextWrapping="Wrap"/>
+    </Grid>
+</Window>
