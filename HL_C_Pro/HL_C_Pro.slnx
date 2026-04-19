@@ -19,5 +19,7 @@
   <Project Path="HL_C_Pro_15/HL_C_Pro_15.csproj" Id="a669ef4e-4796-4117-8756-c56aa7396b94">
     <Build Solution="Debug|*" Project="false" />
   </Project>
-  <Project Path="HL_C_Pro_16/HL_C_Pro_16.csproj" Id="c100af86-8173-4f3b-831a-73be9388ec2c" />
+  <Project Path="HL_C_Pro_16/HL_C_Pro_16.csproj" Id="c100af86-8173-4f3b-831a-73be9388ec2c">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
 </Solution>
